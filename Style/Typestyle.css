@@ -1,0 +1,271 @@
+.drama-image,
+.thrill-image,
+.comedy-image,
+.rom-image,
+.sport-image{
+    position:absolute;
+    right: 0;
+    top: 0;
+    width: 65vw;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-end;
+    z-index: -2;
+}
+.comedy-image,
+.rom-image,
+.sport-image{
+    left: 0;
+}
+.drama-image img {
+    width: 200%;
+    height: 100%;
+    object-fit: cover;
+}
+.thrill-image img {
+    width: 200%;
+    height: auto;
+    object-fit: cover;
+}
+.comedy-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+.rom-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.sport-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.shape-drama, 
+.shape-thriller,
+.shape-com{
+    width: 70vw;
+    height: 100vh;
+    background: linear-gradient(to right, #ff7e5f, #feb47b); /* Background gradient */
+    clip-path: polygon(0% 0%, 80% 0%, 50% 100%, 0% 100%); /* Polygon shape */
+    /* border: 2px solid #333;  Optional border */
+    position: absolute;
+
+}
+.shape-thriller{ 
+    background: linear-gradient(to right, #8f85db, #426d85); /* Background gradient */
+    clip-path: polygon(0% 0%, 50% 0%, 70% 100%, 0% 100%); /* Polygon shape */
+    /* border: 2px solid #333;  Optional border */ 
+}
+/* .shape-rom{
+    clip-path: polygon(0% 0%, 200% 0%, 100% 100%, 0% 120%);
+    background: linear-gradient(to left, #8a4242, #dc7f7f);;
+    z-index: -1;
+} */
+.shape-com,
+.shape-rom{
+    position: absolute;
+    right: 0%;
+    width: 110vh;
+    height: 200vh;
+    transform: translateY(-50%);
+    clip-path: polygon(0% 0%, 900% 0%, 800% 0%, 70% 200%);
+    background: linear-gradient(to left, #6dbe84, #68B87F);
+    z-index: -1;
+}
+.shape-rom{
+    background: linear-gradient(to left, #a82b2b, #ce3d38);
+}
+.author,
+.author-c,
+.author-r,
+.author-s{
+    position: absolute;
+    top: 44%;
+    left: 15%;
+    min-width: 500px;  /* Ensures it doesn't shrink too much */
+    max-width: 700px;  /* Prevents excessive width on large screens */
+    height: auto;  /* Auto height to fit content */
+    background-color:rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    padding: 1.2vw 5%;
+    font-size: clamp(1rem, 2vw, 2.5rem);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Inter", sans-serif;
+   font-weight: bold;
+}
+.info,
+.info-c,
+.info-r,
+.info-s{
+    position: absolute;
+    top: 58%;
+    left: 15%;
+    min-width: 100px;  /* Ensures it doesn't shrink too much */
+    max-width: 500px;  /* Prevents excessive width on large screens */
+    height: auto;  /* Auto height to fit content */
+    background-color:rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    padding: 1.2vw 5%;
+    font-size: clamp(1rem, 1vw, 1.5rem);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Inter", sans-serif;
+}
+.info-c,
+.author-c,
+.info-r,
+.author-r{
+    left: auto;  /* Override left positioning */
+    right: 5%;   /* Move it to the right */
+}
+.info-s,
+.author-s{
+    left: auto;  /* Override left positioning */
+    right: 5%;
+    background-color: #a5a5a5;   /* Move it to the right */
+}
+
+.type-d,
+.type-t,
+.type-c,
+.type-r,
+.type-s{
+    position: absolute;
+    top: 25%;
+    left: 16%;
+    width: auto;
+    height: auto;
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    padding: 0.5vw 2vw;
+    border-radius: 10px;
+    background-color: #ff7e5f;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    overflow: hidden;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.type-d:hover,
+.type-c:hover,
+.type-r:hover,
+.type-t:hover,
+.type-s:hover {
+    background-color: #000000;
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.3);
+}
+.type-d:hover::after,
+.type-c:hover::after,
+.type-r:hover::after,
+.type-t:hover::after,
+.type-s:hover::after{
+    content: "  →";  
+    font-size: 2vw;
+    margin-left: 10px; /* Space between text and the arrow */
+    transition: all 0.3s ease-in-out;
+}
+.type-d:active::after,
+.type-c:active::after,
+.type-r:active::after,
+.type-t:active::after,
+.type-s:active::after{
+    content: "  →";
+}
+
+.type-t {
+    background-color: #164a75;
+}
+.type-c{
+    background-color: #1a5324;
+    left: auto;  /* Override left positioning */
+    right: 25%;   /* Move it to the right */
+    
+}
+.type-r{
+    background-color: #5d0c0b;
+    left: auto;  /* Override left positioning */
+    right: 25%;   /* Move it to the right */
+}
+.type-s{
+    background-color: #5d5d5d;
+    left: auto;  /* Override left positioning */
+    right: 25%;   /* Move it to the right */
+}
+
+@media (max-width: 1024px) {
+    .author,
+    .author-c,
+    .author-r,
+    .author-s{
+        width: 40%;
+        padding: 2vw;
+    }
+    
+    .info, 
+    .info-c,
+    .info-r,
+    .info-s {
+        width: 60%;
+        padding: 4vw;
+    }
+    .type {
+        left: 15%;
+        top: 30%;
+    }
+    .shape-com,
+    .shape-rom{
+        width: 60vw;
+        height: 200vh;
+        right: 0%;
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 60% 200%);
+    }
+    
+}
+
+/* Mobile screens */
+@media (max-width: 768px) {
+    
+    .author,
+    .author-c,
+    .author-r,
+    .author-s{
+        min-width: 300px;  /* Ensures it doesn't shrink too much */
+        max-width: 500px;
+        padding: 2vw;
+    }
+    
+    .info, 
+    .info-c,
+    .info-r,
+    .info-s {
+        width: 60%;
+        padding: 4vw;
+    }
+    .type {
+        left: 15%;
+        top: 30%;
+    }
+    .shape-com,
+    .shape-rom{
+        width: 60vw;
+        height: 200vh;
+        right: 0%;
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 50% 150%);
+    }
+    
+}
+

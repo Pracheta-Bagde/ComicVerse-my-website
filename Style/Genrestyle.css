@@ -1,0 +1,124 @@
+
+.right-image{
+   position:absolute;
+   right: 0;
+   top: 0;
+   width: 60vw;
+   height: 100vh;
+   display: flex;
+   justify-content: flex-end;
+   z-index: -1;
+   /* left: auto;  Ensure left isn't overriding right */
+}
+
+.right-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#Webname {
+    color: black;
+   padding-left: 2vw;
+    font-weight: bold;
+    font-size: 5vw;
+    font-family: "Jockey One",sans-serif;
+    
+}
+#Home{
+    color: rgb(0, 0, 0);
+}
+.buttons{
+    position: fixed;
+    top: 30%;
+    left: 13%;
+    width: 15%;
+    height: 70%;
+    align-items: center; 
+    
+}
+.Drama-btn,
+.Rom-btn,
+.Thril-btn,
+.Sport-btn,
+.Action-btn,
+.Com-btn{
+    padding: 10% 25%;
+    border-radius: 30px;
+    margin-bottom: 20px;
+    background-color: #9A5151;
+    color: white;
+    border: none;
+    font-size: 100%;
+    font-family: "Inter",sans-serif;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.7);
+    transition: all 0.3s ease-in-out;
+}
+/* Hover Effect */
+.Drama-btn:hover,
+.Rom-btn:hover,
+.Thril-btn:hover,
+.Sport-btn:hover,
+.Action-btn:hover,
+.Com-btn:hover {
+    background-color: #C76D6D; /* Lighter shade for hover */
+    transform: scale(1.1); /* Slight enlargement */
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.8); /* White glow */
+}
+
+/* Click Effect */
+.Drama-btn:active,
+.Rom-btn:active,
+.Thril-btn:active,
+.Sport-btn:active,
+.Action-btn:active,
+.Com-btn:active {
+    transform: scale(0.95); /* Slight shrink on click */
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.8);
+}
+
+/* Button Container */
+.arrow-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    position: fixed;
+    bottom: 50%; /* Adjusts space from the bottom */
+    right: 20px; /* Adjusts space from the right */
+}
+
+/* Styling for both buttons */
+.arrow-btn {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(135deg, #b7573f, #feb47b);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+    z-index: 3;
+}
+.arrow-btn a{
+    text-decoration: none; /* Removes underline */
+    color: rgb(255, 255, 255); /* White text */
+}
+
+/* Hover Effect */
+.arrow-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.8);
+}
+
+/* Click Effect */
+.arrow-btn:active {
+    transform: scale(0.9);
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.6);
+}
+

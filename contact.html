@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jockey+One&family=Krona+One&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Contact-Page</title>
+    <link rel="stylesheet" href="/Style/index.css">
+    <link rel="stylesheet" href="/Style/contactStyle.css">
+</head>
+<body>
+
+    <div class="nav"> 
+        <div id="Webname">ComicVerse</div>
+        <div class="nav-items"> 
+            <!-- <div id="Home">Home</div> -->
+            <div id="Home"><a href="home.html">Home</a></div>
+            <!-- <div id="Genre">Genre</div> -->
+            <div id="Genre"><a href="genre.html">Genre</a></div>
+            <div id="Contact"><a href="contact.html">Contact Us</a></div>
+           <!-- <div id="Search">Search</div> -->
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="contact-info">
+            <div class="touch">Get In Touch</div>
+            <div class="ph-email">
+                <div class="ph">📞 Phone: 9834947800</div>
+                <div class="email-text">
+                    ✉️ Email: 
+                    <a href="mailto:prachetabagde2003@gmail.com"> Mail</a>
+                </div>
+            </div>
+            <div class="gh">
+                <div>🔗 GitHub: 
+                    <a href="https://github.com/Pracheta-Bagde" target="_blank">
+                        Profile
+                    </a>
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="box">
+            <div class="row">
+                <input type="text" class="name" placeholder="Name">
+                <input type="email" class="email-input" placeholder="Email">
+            </div>
+            <input type="text" class="phone" placeholder="Phone">
+            <textarea class="msg" placeholder="Message"></textarea>
+            <!-- <button class="btn">Submit</button> -->
+            <button class="btn" onclick="showThankYou()">Submit</button>
+    
+            <!-- Thank You Message -->
+            <p id="thank-you-msg">Thank you for your precious message! 🎉</p>
+        </div>
+
+        <script>
+            function showThankYou() {
+                var message = document.getElementById("thank-you-msg");
+                message.style.display = "block";
+                setTimeout(() => {
+                    message.style.opacity = "1";
+                }, 100);
+            }
+        </script>
+    </div>
+    
+    
+    
+</body>
+</html>

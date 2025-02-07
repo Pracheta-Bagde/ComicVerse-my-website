@@ -1,0 +1,187 @@
+#Webname{
+    color: black;
+}
+
+.nav-items{
+    color: black;
+}
+
+/* Container */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    width: 90%;
+    margin: auto;
+    height: 60vh;
+    flex-wrap: wrap; /* Stack elements on smaller screens */
+}
+
+/* Left Section: Contact Info */
+.contact-info {
+    flex: 1;
+    max-width: 60%;
+    height: 50vh;
+    padding: 1.5rem;
+    background-color: rgba(198, 198, 198, 0.1);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+}
+
+.touch {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: rgb(10, 52, 88);
+    font-family: "Roboto", sans-serif;
+}
+
+
+.ph-email {
+    width: 100%;
+    padding: 15px;
+    /* background-color: rgb(255, 255, 255); */
+    border-radius: 8px;
+    display: flex;
+    flex-direction: row; /* ✅ Ensures Phone & Email are in one row */
+    justify-content: space-between; /* ✅ Creates space between them */
+    align-items: center;
+    gap: 20px; /* ✅ Adds space between phone & email */
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.ph {
+    flex: 1; /* ✅ Each takes equal space */
+    padding: 20px 30px;
+    background-color: #0a0d10;
+    color: white;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+}
+
+
+.email-text {
+    flex: 1; /*  Each takes equal space */
+    padding: 20px 30px; /*  Adjusted padding for better alignment */
+    background-color: #0a0d10;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    text-align: center; 
+}
+
+/* GitHub Box */
+.gh div {
+    width: 100%;
+    padding: 20px 80px;
+    background-color: #2f4c2f;
+    color: white;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.gh a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.gh a:hover {
+    text-decoration: underline;
+}
+
+/* Right Section: Form Box */
+.box {
+    flex: 1;
+    max-width: 500px;
+    padding: 2rem;
+    background-color: #ADD6FA;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Two-column layout for Name & Email */
+.row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 10px;
+}
+
+/* ✅ Fixed Email Input Field */
+.name, .email-input {
+    width: 48%;
+    height: 50px;
+    padding: 15px;
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+/* Full-width Inputs */
+.phone, .msg {
+    width: 100%;
+    height: 50px;
+    margin-top: 10px;
+    padding: 15px;
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+/* Textarea (Message) */
+.msg {
+    height: 120px;
+    resize: none;
+}
+
+/* Submit Button */
+.btn {
+    width: 100%;
+    height: 50px;
+    margin-top: 15px;
+    background-color: #2F5084;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #1d375e;
+}
+#thank-you-msg {
+    display: none;
+    margin-top: 15px;
+    font-size: 1.2rem;
+    color: #2b362e;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .contact-info, .box {
+        width: 90%;
+    }
+}
